@@ -18,10 +18,10 @@
   <form id="orderForm" target="hidden_iframe" onsubmit="showThankYou()" action="https://docs.google.com/forms/d/e/1FAIpQLSchNox_Ec-kalbOJXK0QhzKLgij6Lbi0mV5ufKQgKcNmtJq5Q/formResponse" method="POST">
 
     <label>Customer ID (e.g. AT001):</label>
-    <input type="text" name="entry.1214163066" required><br>
+    <input type="text" name="entry.325254886" required><br>
 
     <label>Tiffin Type:</label>
-    <select name="entry.1823684879" required onchange="updateOptions(this.value)">
+    <select name="entry.608616621" required onchange="updateOptions(this.value)">
       <option value="">Select</option>
       <option value="Mini Veg">Mini Veg</option>
       <option value="Half Veg">Half Veg</option>
@@ -48,14 +48,14 @@
       let html = "";
 
       const sabjiOptions = `<label>Sabji:</label>
-        <select name="entry.1060562796" required>
+        <select name="entry.133002792" required>
           <option value="Dry">Dry</option>
           <option value="Gravy">Gravy</option>
           ${tiffinType === "Special Veg" ? '<option value="Both">Both</option>' : ''}
         </select>`;
 
       const riceOptions = `<label>Rice:</label>
-        <select name="entry.1720113500" required>
+        <select name="entry.929462124" required>
           <option value="Dal Rice">Dal Rice</option>
           <option value="Kadhi Khichadi">Kadhi Khichadi</option>
           <option value="Kadhi Rice">Kadhi Rice</option>
@@ -63,26 +63,26 @@
 
       if (tiffinType === "Mini Veg") {
         html = `<label>Number of Chapati:</label>
-          <select name="entry.2082735036" required>
+          <select name="entry.1527908281" required>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
           </select>` + sabjiOptions;
       } else if (tiffinType === "Half Veg") {
         html = `<label>Number of Chapati:</label>
-          <select name="entry.2082735036" required>
+          <select name="entry.1527908281" required>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>` + sabjiOptions + riceOptions;
       } else if (tiffinType === "Regular Veg") {
         html = `<label>Number of Chapati:</label>
-          <select name="entry.2082735036" required>
+          <select name="entry.1527908281" required>
             <option value="3">3</option>
             <option value="4">4</option>
           </select>` + sabjiOptions + riceOptions;
       } else if (tiffinType === "Special Veg") {
         html = `<label>Number of Chapati:</label>
-          <select name="entry.2082735036" required>
+          <select name="entry.1527908281" required>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
