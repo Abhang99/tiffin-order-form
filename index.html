@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tiffin Order Form</title>
+  <script>
+    function showOptions() {
+      const type = document.getElementById("tiffinType").value;
+      document.querySelectorAll('.option-group').forEach(el => el.style.display = 'none');
+      document.querySelectorAll(`.option-group[data-type='${type}']`).forEach(el => el.style.display = 'block');
+    }
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .form-group { margin-bottom: 15px; }
+    .option-group { display: none; margin-left: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Place Your Tiffin Order</h2>
+  <form action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="post" target="_blank">
+    <div class="form-group">
+      <label for="customerId">Customer ID (e.g., AT001):</label>
+      <input type="text" id="customerId" name="entry.325254886" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tiffinType">Tiffin Type:</label>
+      <select id="tiffinType" name="entry.608616621" onchange="showOptions()" required>
+        <option value="">--Select--</option>
+        <option value="Mini Veg">Mini Veg</option>
+        <option value="Half Veg">Half Veg</option>
+        <option value="Regular Veg">Regular Veg</option>
+        <option value="Special Veg">Special Veg</option>
+      </select>
+    </div>
+
+    <!-- Mini Veg Options -->
+    <div class="option-group" data-type="Mini Veg">
+      <label>Number of Chapati:</label><br>
+      <input type="radio" name="entry.23198156" value="2"> 2
+      <input type="radio" name="entry.23198156" value="3"> 3
+      <input type="radio" name="entry.23198156" value="4"> 4<br>
+      <label>Sabji Type:</label><br>
+      <input type="radio" name="entry.426038114" value="Dry"> Dry
+      <input type="radio" name="entry.426038114" value="Gravy"> Gravy
+    </div>
+
+    <!-- Half Veg Options -->
+    <div class="option-group" data-type="Half Veg">
+      <label>Number of Chapati:</label><br>
+      <input type="radio" name="entry.1527908281" value="1"> 1
+      <input type="radio" name="entry.1527908281" value="2"> 2<br>
+      <label>Sabji Type:</label><br>
+      <input type="radio" name="entry.133002792" value="Dry"> Dry
+      <input type="radio" name="entry.133002792" value="Gravy"> Gravy<br>
+      <label>Rice Type:</label><br>
+      <input type="radio" name="entry.929462124" value="Dal Rice"> Dal Rice
+      <input type="radio" name="entry.929462124" value="Kadhi Khichadi"> Kadhi Khichadi
+      <input type="radio" name="entry.929462124" value="Kadhi Rice"> Kadhi Rice
+    </div>
+
+    <!-- Regular Veg Options -->
+    <div class="option-group" data-type="Regular Veg">
+      <label>Number of Chapati:</label><br>
+      <input type="radio" name="entry.616713171" value="3"> 3
+      <input type="radio" name="entry.616713171" value="4"> 4<br>
+      <label>Sabji Type:</label><br>
+      <input type="radio" name="entry.1102677861" value="Dry"> Dry
+      <input type="radio" name="entry.1102677861" value="Gravy"> Gravy<br>
+      <label>Rice Type:</label><br>
+      <input type="radio" name="entry.228746763" value="Dal Rice"> Dal Rice
+      <input type="radio" name="entry.228746763" value="Kadhi Khichadi"> Kadhi Khichadi
+      <input type="radio" name="entry.228746763" value="Kadhi Rice"> Kadhi Rice
+    </div>
+
+    <!-- Special Veg Options -->
+    <div class="option-group" data-type="Special Veg">
+      <label>Number of Chapati:</label><br>
+      <input type="radio" name="entry.595418956" value="2"> 2
+      <input type="radio" name="entry.595418956" value="3"> 3
+      <input type="radio" name="entry.595418956" value="4"> 4<br>
+      <label>Sabji Type:</label><br>
+      <input type="radio" name="entry.1536522913" value="Dry"> Dry
+      <input type="radio" name="entry.1536522913" value="Gravy"> Gravy
+      <input type="radio" name="entry.1536522913" value="Both"> Both<br>
+      <label>Rice Type:</label><br>
+      <input type="radio" name="entry.2073025988" value="Dal Rice"> Dal Rice
+      <input type="radio" name="entry.2073025988" value="Kadhi Khichadi"> Kadhi Khichadi
+      <input type="radio" name="entry.2073025988" value="Kadhi Rice"> Kadhi Rice
+    </div>
+
+    <br>
+    <button type="submit">Submit Order</button>
+  </form>
+</body>
+</html>
